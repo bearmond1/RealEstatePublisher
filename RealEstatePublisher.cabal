@@ -1,0 +1,130 @@
+cabal-version: 3.6
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           RealEstatePublisher
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/RealEstatePublisher#readme>
+homepage:       https://github.com/githubuser/RealEstatePublisher#readme
+bug-reports:    https://github.com/githubuser/RealEstatePublisher/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/RealEstatePublisher
+
+library
+  exposed-modules:
+      Config
+      Dialog_maintenance
+      Lib
+      Posing_Ad_logic
+      Publishing_Requests
+      TgUpdatesTypes
+  other-modules:
+      Paths_RealEstatePublisher
+  autogen-modules:
+      Paths_RealEstatePublisher
+  hs-source-dirs:
+      src
+  default-extensions:
+      OverloadedStrings
+      OverloadedLists
+      RecordWildCards
+      NamedFieldPuns
+      MultiParamTypeClasses
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-deriving-strategies -fhide-source-paths
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , directory
+    , filepath
+    , hashable
+    , http-client
+    , http-client-tls
+    , http-conduit
+    , lens
+    , relude
+    , text
+    , time
+    , unordered-containers
+  mixins:
+      base hiding (Prelude)
+    , relude (Relude as Prelude)
+  default-language: Haskell2010
+
+executable RealEstatePublisher-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_RealEstatePublisher
+  autogen-modules:
+      Paths_RealEstatePublisher
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+      OverloadedLists
+      RecordWildCards
+      NamedFieldPuns
+      MultiParamTypeClasses
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-deriving-strategies -fhide-source-paths -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      RealEstatePublisher
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , directory
+    , filepath
+    , hashable
+    , http-client
+    , http-client-tls
+    , http-conduit
+    , lens
+    , text
+    , time
+    , unordered-containers
+  default-language: Haskell2010
+
+test-suite RealEstatePublisher-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_RealEstatePublisher
+  autogen-modules:
+      Paths_RealEstatePublisher
+  hs-source-dirs:
+      test
+  default-extensions:
+      OverloadedStrings
+      OverloadedLists
+      RecordWildCards
+      NamedFieldPuns
+      MultiParamTypeClasses
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wmissing-deriving-strategies -fhide-source-paths -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      RealEstatePublisher
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , directory
+    , filepath
+    , hashable
+    , http-client
+    , http-client-tls
+    , http-conduit
+    , lens
+    , text
+    , time
+    , unordered-containers
+  default-language: Haskell2010
